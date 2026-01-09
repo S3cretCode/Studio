@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChargedUP – Behind the Scenes of an RC Car</title>
     <meta name="description" content="Explore the chemistry and physics behind an RC car's power and motion. A Grade 11 Chemistry 30S and Physics 30S project.">
-    <meta name="author" content="Your Name">
-    <meta name="keywords" content="RC car, battery chemistry, physics, chemistry, stoichiometry, magnetic fields, DC motor, Grade 11, Manitoba, Chem 30S, Physics 30S">
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="styles/style.css" as="style">
-    <link rel="preload" href="scripts/main.js" as="script">
-    
     <link rel="stylesheet" href="styles/style.css">
-    <!-- Optional: Favicon -->
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -22,7 +13,6 @@
         <div class="container header-content">
             <a href="index.html" class="logo">
                 <img src="assets/logo.svg" alt="ChargedUP Logo" width="150" height="40">
-                <h1>ChargedUP</h1>
             </a>
             <nav>
                 <ul>
@@ -35,9 +25,7 @@
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
-            <button id="settings-button" aria-label="Website settings">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09z"></path></svg>
-            </button>
+            <button id="settings-button" aria-label="Website settings">⚙️</button>
         </div>
     </header>
 
@@ -45,7 +33,7 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>ChargedUP – Behind the Scenes of an RC Car</h1>
+                    <h1>ChargedUP</h1>
                     <p class="tagline">Unveiling the scientific synergy that powers play</p>
                     <p>Discover the intricate dance between chemistry and physics that brings a simple RC toy car to life. From the hidden chemical reactions within its batteries to the magnetic forces that spin its motor, we explore the real-world science behind everyday technology.</p>
                     <div class="hero-buttons">
@@ -54,8 +42,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <!-- Placeholder for a dynamic RC car illustration/SVG -->
-                    <img src="assets/rc-car-illustration.svg" alt="Illustration of an RC car with visible battery and motor components" width="600" height="400">
+                    <img src="assets/rc-car-illustration.svg" alt="RC Car Illustration" width="500" height="300">
                 </div>
             </div>
         </section>
@@ -63,34 +50,19 @@
         <section class="overview">
             <div class="container">
                 <h2>Project Context & Learning Objectives</h2>
-                <p>This Grade 11 (Manitoba) Chemistry 30S and Physics 30S final project dissects the mechanisms of a battery-powered RC car, serving as a concrete case study to illuminate core curriculum concepts. Our goal is to demonstrate a deep, interdisciplinary understanding, meeting high academic standards while maintaining clarity and specificity.</p>
-
-                <h3>What you'll learn:</h3>
                 <div class="objectives-grid">
                     <div class="objective-card">
                         <h3>Battery Chemistry (Chem 30S)</h3>
-                        <p>Understand how AA alkaline battery chemistry (Zn / MnO₂) governs available charge and energy through stoichiometry, limiting reactant analysis, and electron transfer.</p>
+                        <p>Understand how AA alkaline battery chemistry (Zn / MnO₂) governs available charge and energy through stoichiometry.</p>
                     </div>
                     <div class="objective-card">
-                        <h3>Electrical & Magnetic Principles (Physics 30S)</h3>
-                        <p>Explore how chemical energy transforms into electric current, and how moving charge produces magnetic fields, enabling motion within a DC motor.</p>
+                        <h3>Physics of Motion (Physics 30S)</h3>
+                        <p>Explore how chemical energy transforms into electric current, creating magnetic fields that drive a DC motor.</p>
                     </div>
                     <div class="objective-card">
                         <h3>Interdisciplinary Connection</h3>
-                        <p>Grasp the direct chain from chemical stoichiometry to electrical output, magnetic fields, and ultimately, mechanical motion, emphasizing how chemistry constrains physics.</p>
+                        <p>Stoichiometry → Charge → Current → Magnetic Field → Motion. See how chemistry limits physics.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="call-to-action">
-            <div class="container">
-                <h2>Ready to Dive Deeper?</h2>
-                <p>Choose your starting point or jump straight into the integrated experience.</p>
-                <div class="cta-buttons">
-                    <a href="chemistry.html" class="button primary">Chemistry of Power</a>
-                    <a href="physics.html" class="button secondary">Physics of Motion</a>
-                    <a href="integrated.html" class="button accent">The Full System</a>
                 </div>
             </div>
         </section>
@@ -98,52 +70,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 ChargedUP – Behind the Scenes of an RC Car. All rights reserved.</p>
-            <p>Project Creation Date: December 20, 2025</p>
+            <p>&copy; 2025 ChargedUP. Project Date: December 20, 2025</p>
             <div class="footer-links">
-                <a href="sources.html">Sources</a> |
-                <a href="about.html">About</a> |
-                <a href="LICENSE">License</a>
+                <a href="sources.html">Sources</a> | <a href="about.html">About</a> | <a href="LICENSE">License</a>
             </div>
         </div>
     </footer>
 
     <!-- Settings Modal -->
-    <div id="settings-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="settingsModalTitle">
+    <div id="settings-modal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="settingsModalTitle">Website Settings</h2>
-                <button class="close-button" aria-label="Close settings">&times;</button>
+                <h2>Settings</h2>
+                <button class="close-button">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="setting-group">
                     <h3>Theme</h3>
                     <div class="button-group">
-                        <button id="theme-dark" class="active" aria-pressed="true">Dark</button>
-                        <button id="theme-light" aria-pressed="false">Light</button>
-                        <button id="theme-contrast" aria-pressed="false">High Contrast</button>
+                        <button id="theme-dark" class="active">Dark</button>
+                        <button id="theme-light">Light</button>
+                        <button id="theme-contrast">High Contrast</button>
                     </div>
                 </div>
                 <div class="setting-group">
                     <h3>Text Size</h3>
                     <div class="button-group">
-                        <button id="text-small" aria-pressed="false">Small</button>
-                        <button id="text-default" class="active" aria-pressed="true">Default</button>
-                        <button id="text-large" aria-pressed="false">Large</button>
+                        <button id="text-small">Small</button>
+                        <button id="text-default" class="active">Default</button>
+                        <button id="text-large">Large</button>
                     </div>
                 </div>
                 <div class="setting-group">
                     <h3>Accessibility</h3>
-                    <label class="toggle-switch">
-                        Reduced Motion
-                        <input type="checkbox" id="reduced-motion-toggle">
-                        <span class="slider round"></span>
-                    </label>
+                    <label class="toggle-switch">Reduced Motion <input type="checkbox" id="reduced-motion-toggle"><span class="slider round"></span></label>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="scripts/main.js"></script>
 </body>
 </html>
