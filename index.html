@@ -1,0 +1,801 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChargedUP – Behind the Scenes of an RC Car</title>
+    <meta name="description" content="Explore the chemistry and physics behind an RC car's power and motion. A Grade 11 Chemistry 30S and Physics 30S project.">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="RC car, battery chemistry, physics, chemistry, stoichiometry, magnetic fields, DC motor, Grade 11, Manitoba, Chem 30S, Physics 30S">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/style.css" as="style">
+    <link rel="preload" href="scripts/main.js" as="script">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Optional: Favicon -->
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="ChargedUP Logo" width="150" height="40">
+                <h1>ChargedUP</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="chemistry.html">Chemistry</a></li>
+                    <li><a href="physics.html">Physics</a></li>
+                    <li><a href="integrated.html">Integrated</a></li>
+                    <li><a href="simulations.html">Simulations</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="sources.html">Sources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button id="settings-button" aria-label="Website settings">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09z"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>ChargedUP – Behind the Scenes of an RC Car</h1>
+                    <p class="tagline">Unveiling the scientific synergy that powers play</p>
+                    <p>Discover the intricate dance between chemistry and physics that brings a simple RC toy car to life. From the hidden chemical reactions within its batteries to the magnetic forces that spin its motor, we explore the real-world science behind everyday technology.</p>
+                    <div class="hero-buttons">
+                        <a href="chemistry.html" class="button primary">Explore Chemistry</a>
+                        <a href="physics.html" class="button secondary">Explore Physics</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for a dynamic RC car illustration/SVG -->
+                    <img src="assets/rc-car-illustration.svg" alt="Illustration of an RC car with visible battery and motor components" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <h2>Project Context & Learning Objectives</h2>
+                <p>This Grade 11 (Manitoba) Chemistry 30S and Physics 30S final project dissects the mechanisms of a battery-powered RC car, serving as a concrete case study to illuminate core curriculum concepts. Our goal is to demonstrate a deep, interdisciplinary understanding, meeting high academic standards while maintaining clarity and specificity.</p>
+
+                <h3>What you'll learn:</h3>
+                <div class="objectives-grid">
+                    <div class="objective-card">
+                        <h3>Battery Chemistry (Chem 30S)</h3>
+                        <p>Understand how AA alkaline battery chemistry (Zn / MnO₂) governs available charge and energy through stoichiometry, limiting reactant analysis, and electron transfer.</p>
+                    </div>
+                    <div class="objective-card">
+                        <h3>Electrical & Magnetic Principles (Physics 30S)</h3>
+                        <p>Explore how chemical energy transforms into electric current, and how moving charge produces magnetic fields, enabling motion within a DC motor.</p>
+                    </div>
+                    <div class="objective-card">
+                        <h3>Interdisciplinary Connection</h3>
+                        <p>Grasp the direct chain from chemical stoichiometry to electrical output, magnetic fields, and ultimately, mechanical motion, emphasizing how chemistry constrains physics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="call-to-action">
+            <div class="container">
+                <h2>Ready to Dive Deeper?</h2>
+                <p>Choose your starting point or jump straight into the integrated experience.</p>
+                <div class="cta-buttons">
+                    <a href="chemistry.html" class="button primary">Chemistry of Power</a>
+                    <a href="physics.html" class="button secondary">Physics of Motion</a>
+                    <a href="integrated.html" class="button accent">The Full System</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ChargedUP – Behind the Scenes of an RC Car. All rights reserved.</p>
+            <p>Project Creation Date: December 20, 2025</p>
+            <div class="footer-links">
+                <a href="sources.html">Sources</a> |
+                <a href="about.html">About</a> |
+                <a href="LICENSE">License</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="settingsModalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="settingsModalTitle">Website Settings</h2>
+                <button class="close-button" aria-label="Close settings">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <h3>Theme</h3>
+                    <div class="button-group">
+                        <button id="theme-dark" class="active" aria-pressed="true">Dark</button>
+                        <button id="theme-light" aria-pressed="false">Light</button>
+                        <button id="theme-contrast" aria-pressed="false">High Contrast</button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <h3>Text Size</h3>
+                    <div class="button-group">
+                        <button id="text-small" aria-pressed="false">Small</button>
+                        <button id="text-default" class="active" aria-pressed="true">Default</button>
+                        <button id="text-large" aria-pressed="false">Large</button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <h3>Accessibility</h3>
+                    <label class="toggle-switch">
+                        Reduced Motion
+                        <input type="checkbox" id="reduced-motion-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+/* Base Styles & Global Resets */
+:root {
+    /* Dark Theme (Default) */
+    --background-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --primary-color: #0f3460;
+    --secondary-color: #e94560;
+    --accent-color: #533483;
+    --border-color: #3b3b5b;
+    --card-background: #2a2a4a;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --button-hover-bg: #1c4a80;
+    --link-hover-color: #e94560;
+    --nav-bg: #16213e;
+
+    /* Text Sizes */
+    --font-size-base: 1rem;
+    --font-size-small: 0.9rem;
+    --font-size-large: 1.1rem;
+
+    /* Spacing */
+    --padding-sm: 1rem;
+    --padding-md: 2rem;
+    --padding-lg: 3rem;
+    --margin-sm: 1rem;
+    --margin-md: 2rem;
+    --margin-lg: 3rem;
+
+    /* Transition for reduced motion */
+    --transition-speed: 0.3s ease;
+}
+
+/* Light Theme */
+body.light-mode {
+    --background-color: #f0f2f5;
+    --text-color: #333333;
+    --primary-color: #3f51b5;
+    --secondary-color: #ff5722;
+    --accent-color: #00bcd4;
+    --border-color: #cccccc;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-hover-bg: #5c6bc0;
+    --link-hover-color: #ff5722;
+    --nav-bg: #ffffff;
+}
+
+/* High Contrast Theme */
+body.high-contrast-mode {
+    --background-color: black;
+    --text-color: white;
+    --primary-color: yellow;
+    --secondary-color: cyan;
+    --accent-color: magenta;
+    --border-color: white;
+    --card-background: #333333;
+    --shadow-color: transparent;
+    --button-hover-bg: #ffff00;
+    --link-hover-color: cyan;
+    --nav-bg: #1a1a1a;
+}
+
+/* Text Size Variations */
+body.text-small {
+    --font-size-base: 0.875rem; /* 14px */
+    --font-size-small: 0.8rem;
+    --font-size-large: 1rem;
+}
+
+body.text-large {
+    --font-size-base: 1.125rem; /* 18px */
+    --font-size-small: 1rem;
+    --font-size-large: 1.25rem;
+}
+
+/* Reduced Motion */
+body.reduced-motion * {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-size: var(--font-size-base);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--padding-sm);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+    color: var(--text-color); /* Ensure headings adapt to theme */
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+p { margin-bottom: 1em; }
+
+/* Header */
+header {
+    background-color: var(--nav-bg);
+    padding: var(--padding-sm) 0;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px; /* Adjust height as needed */
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Default dark mode logo color */
+    transition: filter var(--transition-speed);
+}
+
+.light-mode .logo img {
+    filter: brightness(0) invert(0); /* Light mode logo color */
+}
+
+.high-contrast-mode .logo img {
+    filter: invert(100%); /* High contrast logo color */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width var(--transition-speed);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* Settings Button */
+#settings-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.5em;
+    padding: 0.5rem;
+    margin-left: var(--margin-sm);
+    transition: color var(--transition-speed);
+}
+
+#settings-button svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+#settings-button:hover {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.button.primary:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+.button.secondary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.button.secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color); /* Text color changes on hover for contrast */
+    transform: translateY(-2px);
+}
+
+.button.accent {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.button.accent:hover {
+    background-color: darken(var(--accent-color), 10%); /* This won't work in pure CSS, use a slightly darker hex or adjust manually */
+    filter: brightness(0.9); /* A CSS alternative for darkening */
+    transform: translateY(-2px);
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: var(--padding-lg) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--padding-md);
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    padding-right: var(--padding-md); /* Add some spacing */
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+.hero-content .tagline {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #b0c4de;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: var(--margin-md);
+    color: #e0e0e0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--padding-sm);
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* General Sections */
+section {
+    padding: var(--padding-lg) 0;
+    margin-bottom: var(--margin-md);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: var(--margin-lg);
+    font-size: 2.5em;
+    color: var(--text-color);
+}
+
+.overview .objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-md);
+    margin-top: var(--margin-lg);
+}
+
+.objective-card {
+    background-color: var(--card-background);
+    padding: var(--padding-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    text-align: center;
+    transition: transform var(--transition-speed);
+}
+
+.objective-card:hover {
+    transform: translateY(-5px);
+}
+
+.objective-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.8em;
+}
+
+.call-to-action {
+    text-align: center;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: var(--padding-lg) 0;
+    margin-top: var(--margin-lg);
+}
+
+.call-to-action h2 {
+    color: #fff;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: var(--margin-lg);
+}
+
+.call-to-action .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-md);
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    padding: var(--padding-md) 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    margin-bottom: 0.5em;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    margin: 0 0.5em;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Settings Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    margin: auto;
+    padding: var(--padding-md);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    position: relative;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--padding-sm);
+    margin-bottom: var(--margin-md);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.8em;
+}
+
+.close-button {
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--secondary-color);
+    text-decoration: none;
+    outline: none;
+}
+
+.setting-group {
+    margin-bottom: var(--margin-md);
+}
+
+.setting-group h3 {
+    color: var(--secondary-color);
+    font-size: 1.3em;
+    margin-bottom: var(--margin-sm);
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+    font-size: 0.9em;
+}
+
+.button-group button:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--primary-color);
+}
+
+.button-group button.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Toggle Switch (Reduced Motion) */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: var(--margin-sm);
+    vertical-align: middle;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: 34px; /* Align text vertically */
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: var(--transition-speed);
+    border-radius: 34px;
+}
+
+.toggle-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: var(--transition-speed);
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: var(--secondary-color);
+}
+
+.toggle-switch input:focus + .slider {
+    box-shadow: 0 0 1px var(--secondary-color);
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Align label text */
+.setting-group label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: var(--padding-sm); /* Adjust spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--padding-sm);
+    }
+    nav ul {
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    .logo {
+        margin-bottom: var(--margin-sm);
+    }
+    #settings-button {
+        position: absolute;
+        top: var(--padding-sm);
+        right: var(--padding-sm);
+        margin-left: 0; /* Remove extra margin */
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content .tagline {
+        font-size: 1.2em;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .overview .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.5em; }
+    body.text-large {
+        --font-size-base: 1.125rem; /* Max 18px on mobile for large text */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-group {
+        flex-direction: column;
+    }
+    .button-group button {
+        width: 100%;
+    }
+    .call-to-action .cta-buttons {
+        flex-direction: column;
+        gap: var(--padding-sm);
+    }
+    .button {
+        width: 100%;
+    }
+}
