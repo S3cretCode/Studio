@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Labs – ChargedUP</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo"><img src="assets/logo.svg" alt="ChargedUP Logo" width="150" height="40"></a>
+            <nav>
+                <ul>
+                    <li><a href="chemistry.html">Chemistry</a></li>
+                    <li><a href="physics.html">Physics</a></li>
+                    <li><a href="integrated.html">Integrated</a></li>
+                    <li><a href="simulations.html" class="active">Simulations</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="sources.html">Sources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button id="settings-button">⚙️</button>
+        </div>
+    </header>
+
+    <main class="container content-page">
+        <h1>Virtual Labs</h1>
+        
+        <section class="simulation-card">
+            <h2>1. Battery Discharge Simulator</h2>
+            <canvas id="battery-discharge-sim" width="600" height="350"></canvas>
+            <div class="simulation-controls">
+                <label>Load Resistance (Ω): <input type="range" id="load-resistance" min="5" max="50" value="20"></label>
+                <span id="load-resistance-value">20 Ω</span>
+                <button id="start-discharge-sim" class="button primary">Start</button>
+                <button id="reset-discharge-sim" class="button secondary">Reset</button>
+            </div>
+        </section>
+
+        <section class="simulation-card">
+            <h2>2. Magnetic Field Visualizer</h2>
+            <canvas id="magnetic-field-sim" width="600" height="350"></canvas>
+            <div class="simulation-controls">
+                <label>Direction: <select id="current-direction"><option value="up">Up</option><option value="down">Down</option></select></label>
+                <label>Current (A): <input type="range" id="current-strength" min="0.5" max="5" step="0.1" value="2"></label>
+            </div>
+        </section>
+
+        <section class="simulation-card">
+            <h2>3. Conceptual DC Motor</h2>
+            <canvas id="dc-motor-sim" width="600" height="350"></canvas>
+            <div class="simulation-controls">
+                <button id="start-motor-sim" class="button primary">Start</button>
+                <button id="stop-motor-sim" class="button secondary">Stop</button>
+                <label>Speed: <input type="range" id="motor-speed" min="1" max="10" value="5"></label>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 ChargedUP. Project Date: December 20, 2025</p></div>
+    </footer>
+    <div id="settings-modal" class="modal"></div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/simulations.js"></script>
+</body>
+</html>
