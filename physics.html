@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics – ChargedUP</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo"><img src="assets/logo.svg" alt="ChargedUP Logo" width="150" height="40"></a>
+            <nav>
+                <ul>
+                    <li><a href="chemistry.html">Chemistry</a></li>
+                    <li><a href="physics.html" class="active">Physics</a></li>
+                    <li><a href="integrated.html">Integrated</a></li>
+                    <li><a href="simulations.html">Simulations</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="sources.html">Sources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button id="settings-button">⚙️</button>
+        </div>
+    </header>
+
+    <main class="container content-page">
+        <h1>The Kinetic Drive: From Current to Motion</h1>
+        <section>
+            <h2>Current & Magnetic Fields</h2>
+            <p>Electric current ($I$) is the flow of charge. A fundamental principle of physics is that moving charge creates a magnetic field. We determine the direction of this field using the <strong>Right-Hand Rule</strong>.</p>
+            <div class="visual-explanation">
+                <img src="assets/right-hand-rule-wire.svg" alt="Right Hand Rule Diagram" width="400">
+            </div>
+        </section>
+
+        <section>
+            <h2>Conceptual DC Motor Operation</h2>
+            <p>A DC motor converts electrical energy to mechanical energy using interacting magnetic fields.</p>
+            <ol>
+                <li><strong>Current flows</strong> through the armature coil, turning it into an electromagnet.</li>
+                <li><strong>Magnetic fields interact:</strong> The armature's field pushes against the stator's permanent magnets (Like poles repel, Opposites attract).</li>
+                <li><strong>The Commutator</strong> flips the current direction every half-turn to keep the motor spinning in one direction.</li>
+            </ol>
+            <div class="did-you-know">
+                <h3>Did You Know? (Back EMF)</h3>
+                <p>As the motor spins, it generates a "back voltage" that opposes the battery current. This limits the top speed and prevents the motor from burning out!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 ChargedUP. Project Date: December 20, 2025</p></div>
+    </footer>
+    <div id="settings-modal" class="modal"></div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/physics.js"></script>
+</body>
+</html>
