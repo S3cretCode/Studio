@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated System – ChargedUP</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo"><img src="assets/logo.svg" alt="ChargedUP Logo" width="150" height="40"></a>
+            <nav>
+                <ul>
+                    <li><a href="chemistry.html">Chemistry</a></li>
+                    <li><a href="physics.html">Physics</a></li>
+                    <li><a href="integrated.html" class="active">Integrated</a></li>
+                    <li><a href="simulations.html">Simulations</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="sources.html">Sources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button id="settings-button">⚙️</button>
+        </div>
+    </header>
+
+    <main class="container content-page">
+        <h1>The Full Circuit: Energy Chain</h1>
+        <section>
+            <h2>Stoichiometry → Charge → Current → Field → Motion</h2>
+            <p>This interactive diagram shows how chemical limits constrain physical motion.</p>
+            
+            <div class="interdisciplinary-diagram">
+                <div id="integrated-simulation-controls">
+                    <label>Battery Health (Simulated %): <input type="range" id="battery-health" min="0" max="100" value="100"></label>
+                    <span id="battery-health-value">100%</span>
+                </div>
+                <div id="energy-flow-visualization">
+                    <canvas id="energy-flow-canvas" width="800" height="450"></canvas>
+                </div>
+                <div id="plain-language-interpretation">
+                    <h3>What's Happening:</h3>
+                    <p id="interpretation-text">Loading...</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Internal Resistance & Voltage Drop</h2>
+            <p>Chemistry doesn't just provide energy; the physical construction of the battery creates resistance. The voltage reaching the motor ($V_{load}$) is:</p>
+            <div class="equation-box">$$V_{load} = EMF - (I \times R_{internal})$$</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 ChargedUP. Project Date: December 20, 2025</p></div>
+    </footer>
+    <div id="settings-modal" class="modal"></div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/integrated.js"></script>
+</body>
+</html>
