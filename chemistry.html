@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry – ChargedUP</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo"><img src="assets/logo.svg" alt="ChargedUP Logo" width="150" height="40"></a>
+            <nav>
+                <ul>
+                    <li><a href="chemistry.html" class="active">Chemistry</a></li>
+                    <li><a href="physics.html">Physics</a></li>
+                    <li><a href="integrated.html">Integrated</a></li>
+                    <li><a href="simulations.html">Simulations</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="sources.html">Sources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button id="settings-button">⚙️</button>
+        </div>
+    </header>
+
+    <main class="container content-page">
+        <h1>The Chemical Heart: AA Alkaline Batteries</h1>
+        <section>
+            <h2>Reaction & Stoichiometry</h2>
+            <p>The standard AA battery relies on the redox reaction between Zinc and Manganese Dioxide. The simplified net reaction is:</p>
+            <div class="equation-box">$$Zn(s) + 2MnO_2(s) + H_2O(l) \rightarrow ZnO(s) + 2MnO(OH)(s)$$</div>
+            <p><strong>Oxidation (Anode):</strong> $$Zn \rightarrow Zn^{2+} + 2e^-$$ (1 mol Zn produces 2 mol electrons)</p>
+            <p><strong>Reduction (Cathode):</strong> $$MnO_2 + e^- \rightarrow MnO(OH)$$ (1 mol MnO₂ consumes 1 mol electrons)</p>
+        </section>
+
+        <section>
+            <h2>Interactive Stoichiometry Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <label>Mass of Zinc (g): <input type="number" id="zinc-mass" value="2.8" step="0.1"></label>
+                    <label>Mass of MnO₂ (g): <input type="number" id="mno2-mass" value="7.5" step="0.1"></label>
+                    <button id="calculate-battery" class="button primary">Calculate</button>
+                    <button id="reset-battery" class="button secondary">Reset</button>
+                </div>
+                <div class="calculator-output">
+                    <p><strong>Limiting Reactant:</strong> <span id="limiting-reactant">---</span></p>
+                    <p><strong>Moles of Electrons:</strong> <span id="moles-electrons">---</span> mol</p>
+                    <p><strong>Total Charge (Q):</strong> <span id="total-charge">---</span> C</p>
+                    <p><strong>Theoretical Energy (E):</strong> <span id="electrical-energy">---</span> J</p>
+                    <button class="button accent toggle-work">Show/Hide Step-by-Step Work</button>
+                    <div class="work-details" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Optional Extension: NiMH</h2>
+            <p>Nickel-Metal Hydride batteries use a different reaction ($MH + NiO(OH) \rightarrow M + Ni(OH)_2$) allowing for recharging and lower internal resistance.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 ChargedUP. Project Date: December 20, 2025</p></div>
+    </footer>
+    <div id="settings-modal" class="modal"></div> <!-- Populated by main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/chemistry.js"></script>
+</body>
+</html>
